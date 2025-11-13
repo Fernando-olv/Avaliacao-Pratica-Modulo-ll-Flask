@@ -1,7 +1,12 @@
-from flask import Flask, request, jsonify 
+from flask import Flask, request, render_template
+
 
 #criando o nosso aplicativo Flask ⬇
 app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 #Criação da rota /soma com metodo GET
 @app.route("/somar", methods=["GET"])
@@ -49,3 +54,4 @@ def dividir () :
 
 
 app.run(debug=True)
+
