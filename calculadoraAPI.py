@@ -28,8 +28,6 @@ def dividir():
 def somar():
     valor1 = request.args.get("a", type=int, default=0)
     valor2 = request.args.get('b', type=int, default=0)
-      if valor2 == 0:
-        return {"mensagem":"Erro de divisão por zero"}
     total = valor1 + valor2
     #Devolveremos ao usuario uma respota com json no corpo
     return {"total":total}
@@ -42,8 +40,6 @@ def somar():
 def multiplicar():
     valor1 = request.args.get("a", type=int, default=0)
     valor2 = request.args.get('b', type=int, default=0)
-       if valor2 == 0:
-        return {"mensagem":"Erro de divisão por zero"}
     total = valor1 * valor2
     #Devolveremos ao usuario uma respota com json no corpo
     return {"total":total}
@@ -55,8 +51,6 @@ def multiplicar():
 def subitrair():
     valor1 = request.args.get("a", type=int, default=0)
     valor2 = request.args.get('b', type=int, default=0)
-      if valor2 == 0:
-        return {"mensagem":"Erro de divisão por zero"}
     total = valor1 - valor2
     #Devolveremos ao usuario uma respota com json no corpo
     return {"total":total}
